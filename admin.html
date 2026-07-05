@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Panel de administración — Emma</title>
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body.admin-body {
+      background: var(--beige);
+      min-height: 100vh;
+    }
+
+    #login-screen {
+      max-width: 380px;
+      margin: 4rem auto;
+    }
+
+    #login-screen h2 {
+      margin-top: 0;
+    }
+
+    .admin-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .admin-header .brand-mini {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+
+    .admin-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .msg {
+      font-size: .9rem;
+      margin-top: .5rem;
+      display: inline-block;
+    }
+
+    .msg.error {
+      color: #b00020;
+    }
+
+    .msg.success {
+      color: #2f7a67;
+    }
+
+    fieldset {
+      border: 1px solid #eee;
+      border-radius: .8rem;
+      padding: 1rem;
+      margin: 0 0 1rem;
+    }
+
+    fieldset legend {
+      padding: 0 .4rem;
+      font-weight: 600;
+      color: var(--morado);
+    }
+
+    #img-preview {
+      max-width: 180px;
+      max-height: 130px;
+      border-radius: .6rem;
+      margin-top: .6rem;
+      display: none;
+      object-fit: cover;
+    }
+
+    .prop-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .prop-item {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .prop-item img {
+      width: 90px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: .6rem;
+      flex-shrink: 0;
+      background: #eee;
+    }
+
+    .prop-item .info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .prop-item .info h4 {
+      margin: 0 0 .2rem;
+      font-size: 1rem;
+    }
+
+    .prop-item .acciones {
+      display: flex;
+      gap: .5rem;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+
+    .btn.small {
+      padding: .4rem .8rem;
+      font-size: .85rem;
+    }
+
+    .btn.danger {
+      background: #b00020;
+    }
+  </style>
+</head>
+
+<body class="admin-body">
+
+  <!-- LOGIN -->
+  <div id="login-screen" class="card pad">
+    <h2>Acceso al panel</h2>
+    <p class="disclaimer">Ingresa con el correo y la contraseña que se configuraron para administrar el catálogo.</p>
+    <form id="login-form">
+      <label class="field">Correo electrónico
+        <input type="email" id="login-email" required autocomplete="username" />
+      </label>
+      <label class="field" style="margin-top:.6rem">Contraseña
+        <input type="password" id="login-password" required autocomplete="current-password" />
+      </label>
+      <button class="btn" type="submit" style="margin-top:1rem">Iniciar sesión</button>
+      <div id="login-msg" class="msg"></div>
+    </form>
+  </div>
+
+  <!-- PANEL -->
+  <div id="admin-panel" class="admin-wrap" style="display:none">
+    <div class="admin-header">
+      <div class="brand-mini">
+        <img src="img/logo.png" alt="Emma logo" />
+        <div>
+          <strong>Panel de administración</strong><br>
+          <small><a href="index.html">← Volver al sitio</a></small>
+        </div>
+      </div>
+      <button class="btn secondary" id="btn-logout" type="button">Cerrar sesión</button>
+    </div>
+
+    <div class="card pad">
+      <h3 id="form-title">Agregar propiedad</h3>
+      <form id="prop-form">
+        <input type="hidden" id="prop-id" value="">
+
+        <fieldset>
+          <legend>Datos generales</legend>
+          <div class="grid grid-2">
+            <label class="field">Título
+              <input type="text" id="f-titulo" required placeholder="Ej. Casa La Cascada · 3 Rec · 2 Baños" />
+            </label>
+            <label class="field">Precio (MXN)
+              <input type="number" id="f-precio" required min="0" step="1" placeholder="Ej. 5000000" />
+            </label>
+          </div>
+          <div class="grid grid-2" style="margin-top:.6rem">
+            <label class="field">Operación
+              <select id="f-operacion" required>
+                <option value="venta">Venta</option>
+                <option value="renta">Renta</option>
+              </select>
+            </label>
+            <label class="field">Tipo
+              <select id="f-tipo" required>
+                <option value="casa">Casa</option>
+                <option value="terreno">Terreno</option>
+                <option value="local">Local comercial</option>
+                <option value="departamento">Departamento</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ubicación y superficie</legend>
+          <div class="grid grid-2">
+            <label class="field">Colonia / zona
+              <input type="text" id="f-colonia" placeholder="Ej. San Pablo Etla" />
+            </label>
+            <label class="field">Ciudad
+              <input type="text" id="f-ciudad" placeholder="Oaxaca de Juárez" value="Oaxaca de Juárez" />
+            </label>
+          </div>
+          <div class="grid grid-2" style="margin-top:.6rem">
+            <label class="field">m² de construcción
+              <input type="number" id="f-m2c" min="0" step="0.01" placeholder="Ej. 140" />
+            </label>
+            <label class="field">m² de terreno
+              <input type="number" id="f-m2t" min="0" step="0.01" placeholder="Ej. 800" />
+            </label>
+          </div>
+          <label class="field" style="margin-top:.6rem">Enlace de Google Maps (opcional)
+            <input type="url" id="f-mapa" placeholder="https://maps.app.goo.gl/..." />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Descripción</legend>
+          <label class="field">Resumen breve (aparece en la tarjeta del catálogo)
+            <textarea id="f-resumen" placeholder="Ej. 140 m² const · 800 m² terreno · Cisterna de 12000 litros"></textarea>
+          </label>
+          <label class="field" style="margin-top:.6rem">Ficha técnica detallada (un punto por línea; aparece al hacer
+            clic en "Ficha técnica")
+            <textarea id="f-ficha"
+              placeholder="Recámaras: 2 · Baños: 1&#10;Cisterna de 12,000 litros&#10;Corredores amplios"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Foto</legend>
+          <label class="field">Imagen principal
+            <input type="file" id="f-imagen" accept="image/*" />
+          </label>
+          <img id="img-preview" alt="Vista previa" />
+          <p class="disclaimer" style="margin-top:.4rem">La foto se comprime automáticamente. Si editas una
+            propiedad y no eliges una foto nueva, se conserva la actual.</p>
+        </fieldset>
+
+        <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+          <button class="btn" type="submit" id="btn-guardar">Guardar propiedad</button>
+          <button class="btn secondary" type="button" id="btn-cancelar" style="display:none">Cancelar edición</button>
+          <span id="form-msg" class="msg"></span>
+        </div>
+      </form>
+    </div>
+
+    <div class="card pad" style="margin-top:1.5rem">
+      <h3>Propiedades publicadas</h3>
+      <div id="prop-list" class="prop-list">
+        <p>Cargando…</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+
+</html>
