@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emma - Agente Inmobiliaria en Oaxaca</title>
+  <meta name="description"
+    content="Emma - Asesoría inmobiliaria independiente en Oaxaca. Venta, renta, terrenos y locales." />
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+
+<body>
+  <!-- Barra fija de contacto rápido -->
+  <div class="cta-bar" aria-label="Accesos rápidos">
+    <a class="btn" href="https://wa.me/529515470557?text=Hola%20Emma,%20me%20interesa%20una%20propiedad" target="_blank"
+      rel="noopener">💬 WhatsApp</a>
+    <a class="btn secondary" href="#formulario">📅 Agendar cita</a>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#hero" class="brand">
+        <img src="img/logo.png" alt="Emma logo" class="logo">
+        <div class="brand-text">
+          <h1>Emma</h1>
+          <small>Agente inmobiliaria - Oaxaca, México</small>
+        </div>
+      </a>
+      <button id="navToggle" class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <nav id="navMenu" class="nav-menu">
+        <a href="#servicios">Servicios</a>
+        <a href="#listado">Catálogo</a>
+        <a href="#blog">Blog</a>
+        <a href="#mision">Misión</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <body>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="badge">Tu llave a un nuevo capítulo</span>
+          <h2 class="section-title" style="font-size:2.3rem">Compra, vende o renta en Oaxaca con acompañamiento cálido y
+            personalizado</h2>
+          <p class="lead">Soy <strong>Emma</strong>, agente inmobiliaria independiente. Te ayudo a encontrar tu hogar
+            ideal,
+            a vender con certeza o a rentar con seguridad jurídica. Gestiono contratos, visitas y seguimiento de
+            principio a fin.</p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem">
+            <span class="pill">Casas</span>
+            <span class="pill">Terrenos</span>
+            <span class="pill">Locales comerciales</span>
+            <span class="pill">Bodegas</span>
+            <span class="pill">Departamentos</span>
+          </div>
+          <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
+            <a class="btn" href="#listado">🔎 Ver propiedades</a>
+            <a class="btn secondary" href="#formulario">✉️ Solicitar información</a>
+          </div>
+          <p class="disclaimer" style="margin-top:.75rem">Aviso de privacidad disponible bajo solicitud.</p>
+        </div>
+        <div class="card pad">
+          <h3 style="margin-top:0">¿Qué te ofrezco?</h3>
+          <ul style="margin:0;padding-left:1.1rem;line-height:1.6">
+            <li>Asesoría para <strong>vender</strong> tu inmueble.</li>
+            <li>Gestión de <strong>rentas</strong></li>
+            <li>Acompañamiento para <strong>comprar</strong> con seguridad. </li>
+            <li>Apoyo legal</li>
+          </ul>
+          <hr style="margin:1rem 0">
+          <div style="margin-top:.75rem">
+            <h3>Cobertura y horarios</h3>
+            <p style="margin:0 0 0">Cobertura: Estado de Oaxaca en todas sus regiones y convenios con agentes
+              inmobiliarios
+              de otros estados.
+              <br>
+              Horario: L–V 9:00–20:00, S 10:00–18:00.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISIÓN Y VALORES -->
+    <section id="mision" class="section-alt colora">
+      <div class="container">
+        <h2 class="section-title">Misión & Valores</h2>
+        <p class="lead">Brindar un servicio inmobiliario que priorice a las personas: <strong>transparencia</strong> en
+          la información, <strong>seguridad jurídica</strong> y <strong>acompañamiento humano</strong> en cada decisión.
+        </p>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem">
+          <span class="pill color-vals">Honestidad y Transparencia</span>
+          <span class="pill color-vals">Responsabilidad</span>
+          <span class="pill color-vals">Respeto</span>
+          <span class="pill color-vals">Empatía</span>
+          <span class="pill color-vals">Confidencialidad</span>
+          <span class="pill color-vals">Profesionalismo</span>
+          <span class="pill color-vals">Ética profesional</span>
+          <span class="pill color-vals">Servicio y actitud positiva</span>
+          <span class="pill color-vals">Eficiencia</span>
+          <span class="pill color-vals">Perseverancia y disciplina</span>
+          <span class="pill color-vals">Justicia y equidad</span>
+        </div>
+        <div class="kpis carousel" style="margin-top:1rem">
+          <div class="kpi carousel-item">
+            <h3>Honestidad y Transparencia</h3>
+            <div>Decir la verdad sobre el estado de una propiedad, no ocultar información importante(precios, trámites,
+              cargas legales)</div>
+          </div>
+          <div class="kpi carousel-item">
+            <h3>Responsabilidad</h3>
+            <div>Cumplir con los compromisos y tiempos establecidos. Ser puntual y organizada en citas y procesos</div>
+          </div>
+          <div class="kpi carousel-item">
+            <h3>Respeto</h3>
+            <div>Tratar con dignidad a tods los clientes, sin importar su nivel económico</div>
+          </div>
+          <div class="kpi carousel-item">
+            <h3>Empatía</h3>
+            <div>Ponerse en el lugar del comprador o vendedor. Entender la importancia emocional de comprar/vender una
+              casa
+              o terreno</div>
+          </div>
+          <div class="kpi carousel-item">
+            <h3>Confidencialidad</h3>
+            <div>Resguardar datos personales y financieros de los clientes.</div>
+          </div>
+          <div class="kpi carousel-item">
+            <h3>Profesionalismo</h3>
+            <div>
+              Actualizarse constantemente en temas legales, financieros y de mercado. Mostrar siempre una imagen seria,
+              confiable y preparada.
+            </div>
+          </div>
+          <div class="kpi carousel-item">
+            <h3> Perseverancia y disciplina</h3>
+            <div>La venta de inmuebles requiere constancia, paciencia y seguimiento.</div>
+          </div>
+          <div class="kpi carousel-item">
+            <h3>Justicia y equidad</h3>
+            <div>Negociar buscando un trato justo tanto para el comprador como para el vendedor.</div>
+          </div>
+          <div class="kpi carousel-item">
+            <h3>Servicio y actitud positiva</h3>
+            <div>
+              Ver cada cliente como una relación a largo plazo y no solo una comisión inmediata.
+              Resolver problemas con disposición y buena actitud.
+            </div>
+          </div>
+          <div class="kpi carousel-item">
+            <h3>Ética profesional</h3>
+            <div>Rechazar prácticas deshonestas como inflar precios, favoritismos o comisiones ocultas.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section-alt colorb">
+      <div class="container">
+        <h2 class="section-title">Servicios</h2>
+        <div class="grid grid-3">
+          <div class="card pad item">
+            <div class="icon">🏠</div>
+            <div>
+              <h3>Venta de tu casa</h3>
+              <p>Estrategia de precio, home staging básico y difusión en portales. Reporte semanal.</p>
+            </div>
+          </div>
+          <div class="card pad item">
+            <div class="icon">📃</div>
+            <div>
+              <h3>Contratos & Jurídico</h3>
+              <p>Elaboración y/o revisión de contratos de compraventa y arrendamiento. Check de documentos.</p>
+            </div>
+          </div>
+          <div class="card pad item">
+            <div class="icon">🔑</div>
+            <div>
+              <h3>Renta de inmuebles</h3>
+              <p>Filtrado de inquilinos, garantías, inventario y entrega-recepción con acta.</p>
+            </div>
+          </div>
+          <div class="card pad item">
+            <div class="icon">🧭</div>
+            <div>
+              <h3>Búsqueda a la medida</h3>
+              <p>Te acompaño a encontrar casa, terreno o local ideal según tu presupuesto y tiempos.</p>
+            </div>
+          </div>
+          <div class="card pad item">
+            <div class="icon">📍</div>
+            <div>
+              <h3>Ubicación y visitas</h3>
+              <p>Rutas eficientes y visitas seguras. Enlace con notaría y gestores.</p>
+            </div>
+          </div>
+          <div class="card pad item">
+            <div class="icon">📊</div>
+            <div>
+              <h3>Valuación orientativa</h3>
+              <p>Opinión de valor basada en comparables y tendencias del mercado local.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso" class="section-alt colora">
+      <div class="container">
+        <h2 class="section-title">Así trabajamos</h2>
+        <div class="grid grid-3">
+          <div class="card pad"><strong>1) Diagnóstico</strong>
+            <p>Entiendo tus metas, tiempos y presupuesto. Reunimos documentos.</p>
+          </div>
+          <div class="card pad"><strong>2) Plan</strong>
+            <p>Definimos estrategia (venta/renta/compra), calendario y canales.</p>
+          </div>
+          <div class="card pad"><strong>3) Ejecución</strong>
+            <p>Visitas, negociación, contratos y acompañamiento hasta el cierre.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="listado" class="section-alt colorb">
+      <div class="container">
+        <h2 class="section-title">Catálogo de propiedades</h2>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0 1rem">
+          <select id="filtro-tipo" aria-label="Filtrar por tipo">
+            <option value="">Tipo (todos)</option>
+            <option value="casa">Casa</option>
+            <option value="terreno">Terreno</option>
+            <option value="local">Local</option>
+            <option value="Departamento">Departamento</option>
+          </select>
+          <select id="filtro-operacion" aria-label="Filtrar por operación">
+            <option value="">Operación (todas)</option>
+            <option value="venta">Venta</option>
+            <option value="renta">Renta</option>
+          </select>
+          <input id="filtro-buscar" type="search" placeholder="Buscar colonia, m², recámaras…" aria-label="Buscar" />
+          <button class="btn" id="btn-filtrar">Filtrar</button>
+        </div>
+        <div class="grid grid-4" id="cards">
+          <!-- Tarjeta 1 -->
+          <article class="card" data-tipo="casa" data-operacion="venta" data-tags="la cascada 3 recamaras 144.40m2">
+            <div style="position:relative">
+              <span class="label">En venta</span>
+              <img src="img/CasaLaCascada.jpg"
+                alt="Fachada de casa en La Cascada, Oaxaca" loading="lazy" />
+            </div>
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">Casa la Cascada · 3 Rec · 2 2(1/2) Baños</h3>
+              <div class="price">$5,000,000.00 MXN</div>
+              <p>144.40 m² const · 90.86 m² terreno · Cochera para dos autos.</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">La Cascada</span><span class="tag">Oaxaca de Juárez</span><span
+                  class="tag">Casa</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f1')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Casa La Cascada')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f1">
+              <h3>Casa La Cascada – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Venta</li>
+                <li>Tipo: Casa</li>
+                <li>Construcción: 144.40 m² · Terreno: 90.86 m²</li>
+                <li>Recámaras: 3 · Baños: 2 2(1/2) · Cochera automatizada y techada para dos autos</li>
+                <li>***Año: 2018 · Orientación: Oriente</li>
+                <li>***Equipamiento: Cocina integral, cisterna, gas estacionario</li>
+                <li>Amueblada</li>
+                <li>CISTERNA DE 10 000 LTS</li>
+                <li>PRIMER NIVEL : SALA, COMEDOR, COCINA, MEDIO BAÑO.</li>
+                <li>SEGUNDO NIVEL : RECAMARA PRINCIPAL CON BAÑO Y VESTIDOR . DOS RECAMARAS SECUNDARIAS CON BAÑO COMPARTIDO.</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://www.google.com/maps/place/17%C2%B004'46.6%22N+96%C2%B043'28.7%22W/@17.079607,-96.7272148,17z/data=!3m1!4b1!4m4!3m3!8m2!3d17.079607!4d-96.7246399?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">La Cascada</a></p>
+            </template>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="card" data-tipo="casa" data-operacion="venta"  data-tags="San Lorenzo Cacaotepec 250m2 casa">
+            <div style="position:relative">
+              <span class="label">En venta</span>
+              <img src="img/CasaSanLorenzoCacaotepec.jpg" alt="Casa en San Lorenzo cacaotepec" loading="lazy" />
+            </div>
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">Casa San Lorenzo Cacaotepec · 250 m² · 2 recámaras · 2 baños</h3>
+              <div class="price">$4,500,000.00 MXN</div>
+              <p>250m² const · 200m² terreno · En esquina · Calentador solar · Jardín.</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">San Lorenzo Cacaotepec</span><span class="tag">Oaxaca de Juárez</span><span
+                  class="tag">Casa</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f2')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Casa San Lorenzo Cacaotepec')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f2">
+              <h3>Casa San Lorenzo Cacaotepec – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Venta</li>
+                <li>Construcción: 250m² · Terreno: 200m² </li>
+                <li>Propiedad privada</li>
+                <li>En esquina</li>
+                <li>2 niveles</li>
+                <li>Planda baja: sala, comedor, cocina equipada, baño, área de servicio, jardín</li>
+                <li>Planta alta: amplia recámara principal con baño, vestíbulo, recámara secundaria, baño completo</li>
+                <li>Cochera para 2 autos</li>
+                <li>Jardín</li>
+                <li>Cisterna de 10,000 litros</li>
+                <li>Calentador solar</li>
+                <li>Presurizador</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://maps.app.goo.gl/tphqrha8nd1fRuk87" target="_blank"
+                  rel="noopener">San Lorenzo Cacaotepec</a></p>
+            </template>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="card" data-tipo="casa" data-operacion="renta" data-tags="San Lorenzo Cacaotepec 250m2 casa">
+            <div style="position:relative">
+              <span class="label" style="background:#2f7a67">En renta</span>
+              <img src="img/CasaSanLorenzoCacaotepec.jpg"
+                alt="Casa en San Lorenzo cacaotepec" loading="lazy" />
+            </div>
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">Casa San Lorenzo Cacaotepec · 250 m² · 2 recámaras · 2 baños</h3>
+              <div class="price">$18,000 MXN</div>
+              <p>250m² const · 200m² terreno · En esquina · Calentador solar · Jardín.</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">San Lorenzo Cacaotepec</span><span class="tag">Oaxaca de Juárez</span><span
+                  class="tag">Casa</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f3')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Casa San Lorenzo Cacaotepec')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f3">
+              <h3>Casa San Lorenzo Cacaotepec – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Venta</li>
+                <li>Construcción: 250m² · Terreno: 200m² </li>
+                <li>Propiedad privada</li>
+                <li>En esquina</li>
+                <li>2 niveles</li>
+                <li>Planda baja: sala, comedor, cocina equipada, baño, área de servicio, jardín</li>
+                <li>Planta alta: amplia recámara principal con baño, vestíbulo, recámara secundaria, baño completo</li>
+                <li>Cochera para 2 autos</li>
+                <li>Jardín</li>
+                <li>Cisterna de 10,000 litros</li>
+                <li>Calentador solar</li>
+                <li>Presurizador</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://maps.app.goo.gl/tphqrha8nd1fRuk87" target="_blank"
+                  rel="noopener">San Lorenzo Cacaotepec</a></p>
+            </template>
+          </article>
+          <!-- Tarjeta 4 -->
+          <article class="card" data-tipo="casa" data-operacion="venta" data-tags="San Pablo Etla 2 recamaras una planta">
+            <div style="position:relative">
+              <span class="label">En venta</span>
+              <img src="img/CasaSanPabloEtla.jpg"
+                alt="Fachada de casa en San Pablo Etla, Oaxaca" loading="lazy" />
+            </div> 
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">Casa San Pablo Etla · 2 Rec · 1 Baño · Una planta</h3>
+              <div class="price">$2,950,000.00 MXN</div>
+              <p>140 m² const · 800 m² terreno · Cisterna de 12000 litros</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">San Pablo Etla</span><span class="tag">Oaxaca de Juárez</span><span
+                  class="tag">Casa</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f4')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Casa La Cascada')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f4">
+              <h3>Casa San Pablo Etla – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Venta</li>
+                <li>Tipo: Casa</li>
+                <li>Construcción: 140 m² · Terreno: 800 m²</li>
+                <li>Recámaras: 2 · Baños: 1 </li>
+                <li>Hermosa vista panorámica de la ciudad de Oaxaca. </li>
+                <li>Muy cerca de la ciudad de las niñas.</li>
+                <li>Propiedad Privada</li>
+                <li>CISTERNA DE 12 000 LTS</li>
+                <li>PRIMER NIVEL : Cocina, Sala, Comedor, dos recámaras , un baño completo y area de servicio.</li>
+                <li>Corredores amplios</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://maps.app.goo.gl/occCuqPY2woFy6wx8" target="_blank" rel="noopener">San Pablo Etla</a></p>
+            </template>
+          </article>
+          <!-- Tarjeta 5 -->
+          <article class="card" data-tipo="Departamento" data-operacion="venta" data-tags="Sodedad Etla 100m2 Departamento venta">
+            <div style="position:relative">
+              <span class="label">En Venta</span>
+              <img src="img/DepartamentosSoledadEtla.jpg"
+                alt="Departamentos tipo Loft en venta en la entrada Soledad Etla" loading="lazy" />
+            </div>
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">2 Departamentos tipo Loft · 100 m²</h3>
+              <div class="price">$2,200,000.00 MXN</div>
+              <p>Departamentos tipo Loft · Sala · baño · comedor · Cocineta · Recámara en tapanco.</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">Soledad Etla</span><span class="tag">Departamentos</span><span
+                  class="tag">Venta</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f5')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Local Xochimilco')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f5">
+              <h3>Departamento Sodedad Etla – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Renta</li>
+                <li>Tipo: Departamento</li>
+                <li>Construcción: 100 m²  por los dos· Terreno: 185 m² (los dos departamentos edificados en el mismo terreno)</li>
+                <li>Baños: 1 · Recámaras: 1 en área de tapanco </li>
+                <li>Servicio de luz,  agua potable.</li>
+                <li>Ubicados en la entrada de Soledad Etla</li>
+                <li>Biodigestor</li>
+                <li>Cisterna</li>
+                <li>Servicio de luz,  agua potable.</li>
+                <li>Propiedad privada</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://www.google.com/maps?q=17.1691741943359,-96.8154144287109" target="_blank"
+                  rel="noopener">Soledad Etla</a></p>
+            </template>
+          </article>
+          <!-- Tarjeta 6 -->
+          <article class="card" data-tipo="casa" data-operacion="venta" data-tags="Colonia Volcanes 333.28m2  Casa venta">
+            <div style="position:relative">
+              <span class="label">En venta</span>
+              <img src="img/CasaColoniaVolcanes.jpg"
+                alt="Casa Colonia Volcanes" loading="lazy" />
+            </div>
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">Casa Colonia Volcanes · 333.28 m²</h3>
+              <div class="price">$7,500,000.00 MXN</div>
+              <p>2 plantas · 4 recámaras · 3 y 1/2 baños · Cochera para tres autos · cisterna</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">Colonia Volcanes</span><span class="tag">Casa</span><span
+                  class="tag">Venta</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f6')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Local Xochimilco')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f6">
+              <h3>Casa en la colonia Volcanes – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Venta</li>
+                <li>Tipo: Casa</li>
+                <li>Construcción: 333.28 m² · Terreno: 242.76 m² </li>
+                <li>Baños: 3 1/2 · Recámaras: una en planta baja con baño y, 3 con baño y vestidor en planta alta</li>
+                <li>TERRAZA: AREA DE ASADOR, MEDIO BAÑO Y TECHADO</li>
+                <li>PLANTA BAJA: SALA, ,COCINA, COMEDOR,CUARTO DE LAVADO,  RECÁMARA CON BAÑO COMPLETO ,COCHERA PARA TRES AUTOS, CISTERNA,  JARDIN Y BODEGA.</li>
+                <li>PLANTA ALTA: TRES RECÁMARA CON  VESTIDOR Y BAÑO CADA UNA, SALA DE T.V</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://maps.app.goo.gl/r2sDTBm77Bv5fPGE7?g_st=aw" target="_blank"
+                  rel="noopener">Colonia Volcanes</a></p>
+            </template>
+          </article>
+          <!-- Tarjeta 7 -->
+          <article class="card" data-tipo="casa" data-operacion="venta" data-tags="Zona norte 321m² Casa venta">
+            <div style="position:relative">
+              <span class="label">En venta</span>
+              <img src="img/CasaZonaNorte.jpg"
+                alt="Casa Zona Norte" loading="lazy" />
+            </div>
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">Casa Zona Norte · 321m²</h3>
+              <div class="price">$5,500,000.00 MXN</div>
+              <p>3 plantas · 5 recámaras · 5 y 2(1/2) baños · Cochera para tres autos grandes · cisterna</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">Zona Norte</span><span class="tag">Casa</span><span
+                  class="tag">Venta</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f7')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Local Xochimilco')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f7">
+              <h3>Casa en Zona Norte – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Venta</li>
+                <li>Tipo: Casa</li>
+                <li>Construcción: 321 m² · Terreno: 200 m² </li>
+                <li>Baños: 5 y 2(1/2) · Recámaras: una en planta baja con baño y, 3 con baño y vestidor en segundo nivel</li>
+                <li>TERRAZA: HERMOSA VISTA DE LA CIUDAD .CUARTO DE SERVICIO CON BAÑO Y AREA DE SERVICIO.</li>
+                <li>PLANTA BAJA: COCHERA PARA TRES AUTOS GRANDES, MEDIO BAÑO, BODEGA, RECAMARA O ESTUDIO  CON BAÑO.</li>
+                <li>PRIMER NIVEL:SALA, COMEDOR, COCINA, MEDIO BAÑO CON POSIBILIDAD DE COLOCAR REGADERA, SALA DE T.V. . CON PUERTAS CORREDIZAS PARA AISLAR LOS ESPACIOS O CONECTARLOS ENTRE SI. COMO PUNTO FOCAL LA ESCALERA AMPLIA , DE HIERRO ESTILO MINIMALISTA. HERMOSA TERRAZA.</li>
+                <li>SEGUNDO NIVEL: RECAMARA PRINCIPAL CON BAÑO Y MODERNO CLOSET, AMPLIO BALCÓN. DOS RECAMARAS SECUNDARIAS CON BAÑO CADA UNA Y CLOSET.</li>
+                <li>Amplia cisterna, con bomba sumergible y Presurizador</li>
+                <li>Enmallado eléctrico</li>
+                <li>Circuito cerrado con alarma</li>
+                <li>Portón eléctrico</li>
+                <li>Gas estacionario</li>
+                <li>Calentador</li>
+                <li>Acabados elegantes y de muy buen gusto; espacios amplios, llenos de luz y ventilación</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://maps.app.goo.gl/HtciJX6mtFsNvBEy7?g_st=iwb" target="_blank"
+                  rel="noopener">Zona norte</a></p>
+            </template>
+          </article>
+          <!-- Tarjeta 8 -->
+          <article class="card" data-tipo="casa" data-operacion="venta" data-tags="Santo Domingo Tomaltepec 201.86m²  Casa venta">
+            <div style="position:relative">
+              <span class="label">En venta</span>
+              <img src="img/CasaSantoDomingoTomaltepec.jpg"
+                alt="Casa Colonia Volcanes" loading="lazy" />
+            </div>
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">Casa Santo Domingo Tomaltepec · 201.86 m²</h3>
+              <div class="price">$5,500,000.00 MXN</div>
+              <p>1 plantas · 4 recámaras · 2 baños · Amplias áreas verdes · Zona rural y segura</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">Santo Domingo Tomaltepec</span><span class="tag">Casa</span><span
+                  class="tag">Venta</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f8')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Local Xochimilco')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f8">
+              <h3>Casa en Santo Domingo Tomaltepec – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Venta</li>
+                <li>Tipo: Casa</li>
+                <li>Construcción: 201.86 m² · Terreno: 1,362.83 m² </li>
+                <li>Baños: 2 · Recámaras: 4</li>
+                <li>Población ubicada a 5min del arbol del Tule</li>
+                <li>Zona rural y segura</li>
+                <li>Casa de un solo nivel</li>
+                <li>Amplias áreas verdes</li>
+                <li>Cuatro recamaras , dos baños, sala, comedor  y cocina equipada</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://www.google.com/maps?q=17.0613258,-96.620013" target="_blank"
+                  rel="noopener">Santo Domingo Tomaltepec</a></p>
+            </template>
+          </article>
+          <!-- Tarjeta 9 -->
+          <article class="card" data-tipo="local" data-operacion="renta" data-tags="xochimilco 60m2 local renta">
+            <div style="position:relative">
+              <span class="label" >En renta</span>
+              <img src=""
+                alt="Local comercial luminoso en Xochimilco" loading="lazy" />
+            </div>
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">Local Xochimilco · 60 m²</h3>
+              <div class="price">$12,500 MXN/mes</div>
+              <p>Planta baja · Medio baño · Cortina metálica · Ideal para boutique o café.</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">Barrio de Xochimilco</span><span class="tag">Local comercial</span><span
+                  class="tag">Renta</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f9')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Local Xochimilco')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f9">
+              <h3>Local Xochimilco – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Renta</li>
+                <li>Tipo: Local comercial</li>
+                <li>Superficie: 60 m²</li>
+                <li>Baños: 1/2 · Altura: 3.2 m</li>
+                <li>Requisitos: 1 mes depósito + aval (o póliza jurídica)</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://maps.google.com/?q=Xochimilco+Oaxaca" target="_blank"
+                  rel="noopener">Xochimilco</a></p>
+            </template>
+          </article>
+        <!-- Tarjeta 10 -->
+          <article class="card" data-tipo="Terreno" data-operacion="venta" data-tags="xochimilco 60m2 local renta">
+            <div style="position:relative">
+              <span class="label" >En renta</span>
+              <img src=""
+                alt="Local comercial luminoso en Xochimilco" loading="lazy" />
+            </div>
+            <div class="pad npadding">
+              <h3 style="margin:.25rem 0">Local Xochimilco · 60 m²</h3>
+              <div class="price">$12,500 MXN/mes</div>
+              <p>Planta baja · Medio baño · Cortina metálica · Ideal para boutique o café.</p>
+              <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">Barrio de Xochimilco</span><span class="tag">Local comercial</span><span
+                  class="tag">Renta</span>
+              </div>
+              <div style="margin-top:.75rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                <button class="btn" onclick="abrirFicha('f10')">📄 Ficha técnica</button>
+                <a class="btn secondary" href="#formulario" onclick="prellenar('Local Xochimilco')">📩 Me interesa</a>
+              </div>
+            </div>
+            <template id="f10">
+              <h3>Local Xochimilco – Ficha técnica</h3>
+              <ul>
+                <li>Operación: Renta</li>
+                <li>Tipo: Local comercial</li>
+                <li>Superficie: 60 m²</li>
+                <li>Baños: 1/2 · Altura: 3.2 m</li>
+                <li>Requisitos: 1 mes depósito + aval (o póliza jurídica)</li>
+              </ul>
+              <p>Ubicación aproximada: <a href="https://maps.google.com/?q=Xochimilco+Oaxaca" target="_blank"
+                  rel="noopener">Xochimilco</a></p>
+            </template>
+          </article>
+        </div>
+          <p class="disclaimer" style="margin-top:1rem">Imágenes ilustrativas. Precios y disponibilidad sujetos a cambio
+          sin
+          previo aviso.
+          </p>
+        </div>
+    </section>
+
+    <!-- Modal Genérico para Fichas -->
+    <dialog id="modal" 
+      style="border:none;border-radius:1rem;max-width:720px;width:92%;padding:3vw;box-shadow:0 20px 60px rgba(0,0,0,.25)">
+      <div class="pad">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem">
+          <strong>Detalle</strong>
+          <button class="btn link" onclick="cerrarModal()">✖ Cerrar</button>
+        </div>
+        <div id="modal-content" style="margin-top:.5rem">
+          <!-- Contenido dinámico -->
+        </div>
+      </div>
+    </dialog>
+
+
+    <!--Blog-->
+    <section id="blog" class="blog">
+      <div class="container">
+        <h2>Blog</h2>
+        <div class="grid cards">
+          <article class="card">
+            <h3><a href="blog-preguntas.html">Preguntas esenciales para hacer al ver una casa</a></h3>
+            <p><small>Publicado: 01 septiembre 2025</small></p>
+            <p>Antes de firmar o comprometerte, haz estas preguntas para evitar sorpresas.</p>
+          </article>
+          <article class="card">
+            <h3><a href="blog-vida.html">Vida en Oaxaca: cultura, gastronomía y barrios para vivir</a></h3>
+            <p><small>Publicado: 15 agosto 2025</small></p>
+            <p>Oaxaca combina tradición, mercado cultural y una excelente calidad de vida. Descubre barrios ideales.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ÚTIL -->
+    <section class="colorb" id="faq">
+      <div class="container colorb">
+        <h2 class="section-title">Preguntas frecuentes</h2>
+        <div class="grid grid-2">
+          <details open>
+            <summary>¿Cómo se define el precio de venta?</summary>
+            <p>Con comparables reales, estado del inmueble y tiempos objetivo. Presento un rango y una estrategia
+              sugerida.
+            </p>
+          </details>
+          <details>
+            <summary>¿Qué necesito para rentar?</summary>
+            <p>Identificación, comprobantes, referencias y aval o póliza jurídica. Te asesoro según tu caso.</p>
+          </details>
+          <details>
+            <summary>¿Trabajas con notaría?</summary>
+            <p>Sí, contamos con <em>partners</em> notariales y gestores para agilizar trámites.</p>
+          </details>
+          <details>
+            <summary>¿Puedo agendar visitas virtuales?</summary>
+            <p>Claro, podemos hacer videollamada y recorrido virtual previo a la visita física.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO / FORMULARIO -->
+    <section id="contacto" class="section-alt colora">
+      <div class="container ">
+        <h2 class="section-title">Contacto</h2>
+        <div class="grid grid-2">
+          <div class="card pad">
+            <h3>Datos de contacto</h3>
+            <p><strong>Teléfono:</strong> <a href="tel:+529515470557">+52 951 547 0557</a><br>
+              <strong>WhatsApp:</strong> <a href="https://wa.me/529515470557" target="_blank" rel="noopener">Enviar
+                mensaje</a><br>
+              <strong>Email:</strong> <a
+                href="mailto:emma.inmobiliaria.oax@gmail.com">emma.inmobiliaria.oax@gmail.com</a><br>
+              <strong>Horario:</strong> L–V 8:00–22:00, S-D 9:00–18:00
+            </p>
+            <p><strong>Oficina:</strong> Oaxaca de Juárez (con cita).<br>
+              <span class="disclaimer">Prefiero agendar para brindarte atención dedicada.</span>
+            </p>
+          </div>
+          <div class="card pad" id="formulario">
+            <h3>Solicitar información o agendar cita</h3>
+            <form id="service_7eivika" novalidate>
+              <div class="grid grid-2">
+                <label class="field">Nombre completo
+                  <input name="nombre" required placeholder="Tu nombre" />
+                </label>
+                <label class="field">Correo electrónico
+                  <input name="email" type="email" required placeholder="tucorreo@email.com" />
+                </label>
+              </div>
+              <div class="grid grid-2">
+                <label class="field">Teléfono / WhatsApp
+                  <input name="telefono" inputmode="tel" placeholder="951..." />
+                </label>
+                <label class="field">Preferencia de contacto
+                  <select name="preferencia">
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="telefono">Llamada</option>
+                    <option value="email">Email</option>
+                    <option value="videollamada">Videollamada</option>
+                  </select>
+                </label>
+              </div>
+              <label class="field">Motivo / Propiedad de interés
+                <input name="propiedad" id="propiedad"
+                  placeholder="Ej. Quiero vender mi casa / Me interesa tu propiedad en..." />
+              </label>
+              <label class="field">Mensaje
+                <textarea name="mensaje" required
+                  placeholder="Cuéntame más sobre lo que necesitas y si quisieras tener una reunión (presencial o virtual) para platicar más a profundidad"></textarea>
+              </label>
+              <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+                <button class="btn" type="submit">Enviar</button>
+                <span id="estado" aria-live="polite"></span>
+              </div>
+              <p class="disclaimer">Al enviar aceptas ser contactada/o con fines informativos. No comparto tus datos con
+                terceros.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </body>
+
+  <footer class="footer" id="contacto">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="Emma logo" class="logo small">
+        <h3>Emma</h3>
+        <p>Tu socia inmobiliaria en Oaxaca — asesoría personalizada y acompañamiento en todo el proceso.</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul class="contact-list">
+          <li>✉️ emma.inmobiliaria.oax@gmail.com</li>
+          <li>📞 +52 951 547 0557</li>
+          <li>📍 Oaxaca de Juárez, Oax.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Enlaces rápidos</h4>
+        <ul class="contact-list">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#listado">Catálogo</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2025 Emma — Agente Inmobiliaria</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
