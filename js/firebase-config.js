@@ -22,3 +22,9 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+
+// Algunas redes (ciertos proveedores de internet, antivirus, redes de
+// oficina) bloquean silenciosamente el método de conexión por defecto de
+// Firestore, causando que guardar/cargar se quede "trabado" sin mostrar
+// ningún error. Esta línea fuerza un modo de conexión más compatible.
+db.settings({ experimentalAutoDetectLongPolling: true });
