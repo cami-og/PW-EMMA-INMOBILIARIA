@@ -23,8 +23,10 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-// Algunas redes (ciertos proveedores de internet, antivirus, redes de
-// oficina) bloquean silenciosamente el método de conexión por defecto de
-// Firestore, causando que guardar/cargar se quede "trabado" sin mostrar
-// ningún error. Esta línea fuerza un modo de conexión más compatible.
-db.settings({ experimentalAutoDetectLongPolling: true });
+// Tu red está cortando la conexión "en streaming" que Firestore intenta usar
+// por defecto (se ve en el panel Network: muchas reconexiones seguidas, cada
+// una con un gsessionid distinto, sin llegar nunca a completar el guardado).
+// Esta línea obliga a usar "long polling" clásico en vez de dejar que el SDK
+// lo detecte solo, lo cual es más lento por petición pero mucho más estable
+// en redes restrictivas.
+db.settings({ experimentalForceLongPolling: true });
